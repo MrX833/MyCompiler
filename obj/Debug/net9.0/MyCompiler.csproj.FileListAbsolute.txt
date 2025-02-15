@@ -1,0 +1,15 @@
+d:\Projects\.NET Projects\MyCompiler\obj\Debug\net9.0\MyCompiler.GeneratedMSBuildEditorConfig.editorconfig
+d:\Projects\.NET Projects\MyCompiler\obj\Debug\net9.0\MyCompiler.AssemblyInfoInputs.cache
+d:\Projects\.NET Projects\MyCompiler\obj\Debug\net9.0\MyCompiler.AssemblyInfo.cs
+d:\Projects\.NET Projects\MyCompiler\obj\Debug\net9.0\MyCompiler.csproj.CoreCompileInputs.cache
+d:\Projects\.NET Projects\MyCompiler\obj\Debug\net9.0\MyCompiler.sourcelink.json
+d:\Projects\.NET Projects\MyCompiler\bin\Debug\net9.0\MyCompiler.exe
+d:\Projects\.NET Projects\MyCompiler\bin\Debug\net9.0\MyCompiler.deps.json
+d:\Projects\.NET Projects\MyCompiler\bin\Debug\net9.0\MyCompiler.runtimeconfig.json
+d:\Projects\.NET Projects\MyCompiler\bin\Debug\net9.0\MyCompiler.dll
+d:\Projects\.NET Projects\MyCompiler\bin\Debug\net9.0\MyCompiler.pdb
+d:\Projects\.NET Projects\MyCompiler\obj\Debug\net9.0\MyCompiler.dll
+d:\Projects\.NET Projects\MyCompiler\obj\Debug\net9.0\refint\MyCompiler.dll
+d:\Projects\.NET Projects\MyCompiler\obj\Debug\net9.0\MyCompiler.pdb
+d:\Projects\.NET Projects\MyCompiler\obj\Debug\net9.0\MyCompiler.genruntimeconfig.cache
+d:\Projects\.NET Projects\MyCompiler\obj\Debug\net9.0\ref\MyCompiler.dll

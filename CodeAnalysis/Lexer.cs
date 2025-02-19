@@ -1,4 +1,4 @@
-class Lexer
+internal sealed class Lexer
     {
         private readonly string _text;
         private int _position;
@@ -27,7 +27,7 @@ class Lexer
             _position++;
         }
 
-        public SyntaxToken NextToken()
+        public SyntaxToken Lex()
         {
             if (_position >= _text.Length)
                 return new SyntaxToken(SyntaxKind.EndOfFileToken, _position, "\0", null);
@@ -61,20 +61,23 @@ class Lexer
                 return new SyntaxToken(SyntaxKind.WhiteSpaceToken, start, text, null);
             }
 
-            if (Current == '+')
+        switch (Current)
+        {
+            case '+':
                 return new SyntaxToken(SyntaxKind.PlusToken, _position++, "+", null);
-            else if (Current == '-')
+            case '-':
                 return new SyntaxToken(SyntaxKind.MinusToken, _position++, "-", null);
-            else if (Current == '*')
+            case '*':
                 return new SyntaxToken(SyntaxKind.StarToken, _position++, "*", null);
-            else if (Current == '/')
+            case '/':
                 return new SyntaxToken(SyntaxKind.SlashToken, _position++, "/", null);
-            else if (Current == '(')
+            case '(':
                 return new SyntaxToken(SyntaxKind.OpenParenthesisToken, _position++, "(", null);
-            else if (Current == ')')
+            case ')':
                 return new SyntaxToken(SyntaxKind.CloseParenthesisToken, _position++, ")", null);
+        }
 
-            _diagnositcs.Add($"ERROR: bad character in input: '{Current}'");
+        _diagnositcs.Add($"ERROR: bad character in input: '{Current}'");
             return new SyntaxToken(SyntaxKind.BadToken, _position++, _text.Substring(_position - 1, 1), null);
         }
     }

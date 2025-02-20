@@ -95,7 +95,9 @@ internal sealed class Parser
 
         private ExpressionSyntax ParsePrimaryExpression()
         {
-            if (Current.Kind == SyntaxKind.OpenParenthesisToken)
+        switch (Current.Kind)
+        {
+            case SyntaxKind.OpenParenthesisToken:
             {
                 var left = Lex();
                 var expression = ParseExpression();
@@ -104,7 +106,16 @@ internal sealed class Parser
                 return new ParenthesizedExpressionSyntax(left, expression, right);
             }
 
-            var numberToken = MatchToken
+            case SyntaxKind.TrueKeyword:
+            case SyntaxKind.FalseKeyword:
+            {
+                var keywordToken = Lex();
+                var value = keywordToken.Kind == SyntaxKind.TrueKeyword;
+                return new LiteralExpressionSyntax(Current, value);
+            }
+        }
+
+        var numberToken = MatchToken
             (SyntaxKind.NumberToken);
             return new LiteralExpressionSyntax(numberToken);
         }
